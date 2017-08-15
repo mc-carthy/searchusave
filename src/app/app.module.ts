@@ -10,6 +10,7 @@ import { AdvertisementDetailComponent } from './advertisements/advertisement-det
 
 import { AdvertisementsService } from './advertisements/advertisements.service';
 import { PostcodeLookupComponent } from './postcode-lookup/postcode-lookup.component';
+import { AdvertisementListComponent } from './advertisements/advertisement-list/advertisement-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PostcodeLookupComponent } from './postcode-lookup/postcode-lookup.compo
     FooterComponent,
     HomeComponent,
     AdvertisementDetailComponent,
-    PostcodeLookupComponent
+    PostcodeLookupComponent,
+    AdvertisementListComponent
   ],
   imports: [
     BrowserModule,

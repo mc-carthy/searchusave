@@ -1,0 +1,12 @@
+<div *ngFor="let a of advertisements">
+    <div class="media">
+        <div class="media-left">
+            <a>
+                <img class="media-object" [src]="a.imagePaths[0]" alt="...">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{ a.title }}</h4>
+        </div>
+    </div>
+</div>
