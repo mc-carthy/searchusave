@@ -1,5 +1,6 @@
 export class Advertisement {
     constructor(
+        public id: number,
         public title: string,
         public price: number,
         public description: string,

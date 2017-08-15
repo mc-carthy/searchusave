@@ -6,6 +6,7 @@ export class AdvertisementsService {
 
     private advertisements: Advertisement[] = [
         new Advertisement(
+            0,
             'Car for sale',
             5000,
             "Generic car description, this one has been drawn out a bit too much in order to show the effect of having a long description. Consider imposing a limit of description length on the advertisement listing page in order to prevent this advertisement taking up way too much room. Doesn't seem fair on the dog in the fridge below...",
@@ -20,6 +21,7 @@ export class AdvertisementsService {
             
         ),
         new Advertisement(
+            1,
             'Fridge for sale',
             250,
             'Generic fridge description. This one is short.',
@@ -36,8 +38,10 @@ export class AdvertisementsService {
 
     constructor() { }
 
-    getAdvertisement(index: number) {
-        return this.advertisements[index];
+    getAdvertisement(id: number) {
+        return this.advertisements.find(
+            x => x.id == id
+        );
     }
 
     getAdvertisements() {
