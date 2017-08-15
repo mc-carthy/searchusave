@@ -1,3 +1,6 @@
-<p>
-  view-categories works!
-</p>
+<div *ngFor="let c of categories" class="col-md-3">
+    <p>{{ c.name }}</p>
+    <ul>
+        <li *ngFor="let sc of c.values">{{ sc }}</li>
+    </ul>
+</div>
