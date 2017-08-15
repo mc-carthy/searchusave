@@ -20,12 +20,12 @@ export class AdvertisementsService {
             
         ),
         new Advertisement(
-            'Fride for sale',
+            'Fridge for sale',
             250,
             'Generic fridge description',
             'Fridge seller contact name',
             '11232332',
-            'fride@test.com',
+            'fridge@test.com',
             ['http://i.imgur.com/bkrMq.jpg'],
             {
                 latitude: -6.00395371425456,
