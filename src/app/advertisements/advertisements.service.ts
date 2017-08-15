@@ -13,7 +13,7 @@ export class AdvertisementsService {
             'Test contact name',
             '02890------',
             'car@test.com',
-            ['http://i.imgur.com/TPaUdg8.jpg'],
+            ['https://i.imgur.com/TPaUdg8.jpg'],
             {
                 latitude: -6.0161106215821,
                 longitude: 54.564733186409
@@ -28,7 +28,7 @@ export class AdvertisementsService {
             'Fridge seller contact name',
             '02890------',
             'fridge@test.com',
-            ['http://i.imgur.com/bkrMq.jpg'],
+            ['https://i.imgur.com/bkrMq.jpg'],
             {
                 latitude: -6.00395371425456,
                 longitude: 54.5511994585784
