@@ -7,10 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AdvertisementDetailComponent } from './advertisements/advertisement-detail/advertisement-detail.component';
-
-import { AdvertisementsService } from './advertisements/advertisements.service';
 import { PostcodeLookupComponent } from './postcode-lookup/postcode-lookup.component';
 import { AdvertisementListComponent } from './advertisements/advertisement-list/advertisement-list.component';
+import { ViewCategoriesComponent } from './advertisements/categories/view-categories/view-categories.component';
+
+import { AdvertisementsService } from './advertisements/advertisements.service';
+import { CategoriesService } from './advertisements/categories/categories.service';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import { AdvertisementListComponent } from './advertisements/advertisement-list/
     HomeComponent,
     AdvertisementDetailComponent,
     PostcodeLookupComponent,
-    AdvertisementListComponent
+    AdvertisementListComponent,
+    ViewCategoriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-      AdvertisementsService
+      AdvertisementsService,
+      CategoriesService
   ],
   bootstrap: [AppComponent]
 })
