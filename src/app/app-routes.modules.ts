@@ -11,7 +11,8 @@ const appRoutes: Routes = [
     { path: 'new', component: AdvertisementNewComponent },
     { path: 'list', component: AdvertisementListComponent},
     { path: 'categories', component: ViewCategoriesComponent},
-    { path: ':id', component: AdvertisementDetailComponent}
+    { path: 'ad/:id', component: AdvertisementDetailComponent},
+    { path: '**', redirectTo: '/'}
 ]   
 
 @NgModule({

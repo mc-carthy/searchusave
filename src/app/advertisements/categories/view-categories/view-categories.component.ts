@@ -14,7 +14,6 @@ export class ViewCategoriesComponent implements OnInit {
 
     ngOnInit() {
         this.categories = this.categoriesService.getCategories();
-        console.log(this.categories);
     }
 
 }
