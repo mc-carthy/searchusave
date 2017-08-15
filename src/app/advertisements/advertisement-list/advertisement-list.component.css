@@ -7,3 +7,9 @@
     padding: 10px 10px;
     border: 2px solid #555555;
 }
+
+a, a:link, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+  }

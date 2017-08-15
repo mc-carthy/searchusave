@@ -11,7 +11,7 @@ import { Advertisement } from './../advertisement.model';
 export class AdvertisementDetailComponent implements OnInit {
 
     id: number;
-    advertisement: {};
+    advertisement: Advertisement;
 
     constructor(
         private route: ActivatedRoute,
