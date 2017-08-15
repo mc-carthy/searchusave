@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AdvertisementDetailComponent } from './advertisements/advertisement-detail/advertisement-detail.component';
 
 import { AdvertisementsService } from './advertisements/advertisements.service';
+import { PostcodeLookupComponent } from './postcode-lookup/postcode-lookup.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AdvertisementsService } from './advertisements/advertisements.service';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AdvertisementDetailComponent
+    AdvertisementDetailComponent,
+    PostcodeLookupComponent
   ],
   imports: [
     BrowserModule
