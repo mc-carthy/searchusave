@@ -1,6 +1,6 @@
-<div *ngFor="let c of categories" class="col-md-3">
-    <p>{{ c.name }}</p>
+<div *ngFor="let c of categories" class="col-md-3 category-box">
+    <h3>{{ c.name }}</h3>
     <ul>
-        <li *ngFor="let sc of c.values">{{ sc }}</li>
+        <li *ngFor="let sc of c.values"><a [routerLink]="['/']">{{ sc }}</a></li>
     </ul>
 </div>

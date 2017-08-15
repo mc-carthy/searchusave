@@ -1,0 +1,9 @@
+.category-box {
+    padding: 5px;
+    margin: 20px 0;
+    display: table;
+}
+
+ul {
+    list-style: none;
+}
