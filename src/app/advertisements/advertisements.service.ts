@@ -37,7 +37,7 @@ export class AdvertisementsService {
     constructor() { }
 
     getAdvertisement(index: number) {
-        return this.advertisements[0];
+        return this.advertisements[index];
     }
 
     getAdvertisements() {
