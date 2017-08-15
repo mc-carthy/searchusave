@@ -1,3 +1,9 @@
 .media-object {
-    max-height: 50px;
+    max-height: 100px;
+}
+
+.media {
+    margin: 10px;
+    padding: 10px 10px;
+    border: 2px solid #555555;
 }
