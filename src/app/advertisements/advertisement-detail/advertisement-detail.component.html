@@ -1,10 +1,10 @@
 <div class="col-md-6">
     <h1>{{ advertisement.title }}</h1>
-    <h1>{{ advertisement.price }}</h1>
+    <h1>{{ advertisement.price | currency:'GBP':true:'1.0-0' }}</h1>
     <p>{{ advertisement.description }}</p>
-    <p>{{ advertisement.contactName }}</p>
-    <p>{{ advertisement.contactPhone }}</p>
-    <p>{{ advertisement.contactEmail }}</p>
+    <p><i class="fa fa-user"></i> {{ advertisement.contactName }}</p>
+    <p><i class="fa fa-phone"></i> {{ advertisement.contactPhone }}</p>
+    <p><i class="fa fa-envelope"></i> {{ advertisement.contactEmail }}</p>
     <div *ngFor="let i of advertisement.imagePaths">
         <img style="max-height: 350px" class="img-responsive" [src]="i" alt="">    
     </div>
