@@ -13,6 +13,7 @@ import { ViewCategoriesComponent } from './advertisements/categories/view-catego
 
 import { AdvertisementsService } from './advertisements/advertisements.service';
 import { CategoriesService } from './advertisements/categories/categories.service';
+import { AdvertisementNewComponent } from './advertisements/advertisement-new/advertisement-new.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CategoriesService } from './advertisements/categories/categories.servic
     AdvertisementDetailComponent,
     PostcodeLookupComponent,
     AdvertisementListComponent,
-    ViewCategoriesComponent
+    ViewCategoriesComponent,
+    AdvertisementNewComponent
   ],
   imports: [
     BrowserModule,
