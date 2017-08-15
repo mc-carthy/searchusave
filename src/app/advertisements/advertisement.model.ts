@@ -1,19 +1,19 @@
 export class Advertisement {
     constructor(
-        title: string,
-        price: number,
-        description: string,
-        contactName: string,
-        contactPhone: string,
-        contactEmail: string,
-        imagePaths: string[],
-        location: Coords
+        public title: string,
+        public price: number,
+        public description: string,
+        public contactName: string,
+        public contactPhone: string,
+        public contactEmail: string,
+        public imagePaths: string[],
+        public location: Coords
     ) {}
 }
 
 export class Coords {
     constructor(
-        latitude: number,
-        longitude: number
+        public latitude: number,
+        public longitude: number
     ) {}
 }

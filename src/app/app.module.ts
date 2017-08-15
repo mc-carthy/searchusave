@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { AdvertisementDetailComponent } from './advertisements/advertisement-detail/advertisement-detail.component';
 
 import { AdvertisementsService } from './advertisements/advertisements.service';
 
@@ -13,7 +14,8 @@ import { AdvertisementsService } from './advertisements/advertisements.service';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    AdvertisementDetailComponent
   ],
   imports: [
     BrowserModule
