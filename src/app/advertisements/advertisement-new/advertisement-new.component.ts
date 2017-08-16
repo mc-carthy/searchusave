@@ -31,6 +31,30 @@ export class AdvertisementNewComponent implements OnInit {
         console.log(this.selectedCategory); 
     }
 
+    onSubmit() {
+        console.log(this.newAdForm);
+        var adToPush: Advertisement = new Advertisement(
+            this.advertisementsService.getNextId(),
+            this.newAdForm.value.adInfo.title,
+            this.newAdForm.value.adInfo.price,
+            this.newAdForm.value.adInfo.description,
+            this.newAdForm.value.contactInfo.name,
+            this.newAdForm.value.contactInfo.phone,
+            this.newAdForm.value.contactInfo.email,
+            [this.newAdForm.value.adInfo.imagePath],
+            
+            {
+                latitude: -6.00395371425456,
+                longitude: 54.5511994585784
+            }
+        );
+        this.advertisementsService.createAdvertisement(adToPush);
+    }
+
+    onPopulateForm() {
+        
+    }
+
     onFakeSubmit() {
         var adToPush: Advertisement = new Advertisement(
             5,
@@ -40,7 +64,7 @@ export class AdvertisementNewComponent implements OnInit {
             'Contact name test',
             '01203214124213123',
             'test@test.com',
-            ['https://imgur.com/bS7eD'],
+            ['https://i.imgur.com/bS7eD'],
             
             {
                 latitude: -6.00395371425456,

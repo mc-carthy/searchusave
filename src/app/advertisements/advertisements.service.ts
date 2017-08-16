@@ -48,6 +48,10 @@ export class AdvertisementsService {
         return this.advertisements.slice();
     }
 
+    getNextId() {
+        return this.advertisements.length;
+    }
+
     createAdvertisement(newAd: Advertisement) {
         this.advertisements.push(newAd)
     }
