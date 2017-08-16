@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { CategoriesService } from './../categories/categories.service';
+import { AdvertisementsService } from './../advertisements.service';
+import { Advertisement } from './../advertisement.model';
 
 @Component({
     selector: 'app-advertisement-new',
@@ -8,15 +11,19 @@ import { CategoriesService } from './../categories/categories.service';
 })
 export class AdvertisementNewComponent implements OnInit {
 
+    @ViewChild('f') newAdForm: NgForm;
+    
     categories;
     selectedCategory;
     subCategories;
 
-    constructor(private categoriesService: CategoriesService) { }
+    constructor(
+        private categoriesService: CategoriesService,
+        private advertisementsService: AdvertisementsService
+    ) { }
 
     ngOnInit() {
         this.categories = this.categoriesService.getCategories();
-        console.log(this.categories);
     }
 
     onCategoryChange(category) {
@@ -24,4 +31,22 @@ export class AdvertisementNewComponent implements OnInit {
         console.log(this.selectedCategory); 
     }
 
+    onFakeSubmit() {
+        var adToPush: Advertisement = new Advertisement(
+            5,
+            'Test title',
+            99999,
+            'Ad description',
+            'Contact name test',
+            '01203214124213123',
+            'test@test.com',
+            ['https://imgur.com/bS7eD'],
+            
+            {
+                latitude: -6.00395371425456,
+                longitude: 54.5511994585784
+            }
+        );
+        this.advertisementsService.createAdvertisement(adToPush);
+    }
 }

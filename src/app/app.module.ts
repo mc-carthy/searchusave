@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routes.modules';
 
 import { AppComponent } from './app.component';
@@ -29,7 +30,8 @@ import { AdvertisementNewComponent } from './advertisements/advertisement-new/ad
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
       AdvertisementsService,
