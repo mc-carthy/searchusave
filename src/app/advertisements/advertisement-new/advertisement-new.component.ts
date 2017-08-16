@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from "@angular/router";
 import { CategoriesService } from './../categories/categories.service';
 import { AdvertisementsService } from './../advertisements.service';
 import { Advertisement } from './../advertisement.model';
@@ -18,6 +19,7 @@ export class AdvertisementNewComponent implements OnInit {
     subCategories;
 
     constructor(
+        private router: Router,
         private categoriesService: CategoriesService,
         private advertisementsService: AdvertisementsService
     ) { }
@@ -32,7 +34,6 @@ export class AdvertisementNewComponent implements OnInit {
     }
 
     onSubmit() {
-        console.log(this.newAdForm);
         var adToPush: Advertisement = new Advertisement(
             this.advertisementsService.getNextId(),
             this.newAdForm.value.adInfo.title,
@@ -49,6 +50,7 @@ export class AdvertisementNewComponent implements OnInit {
             }
         );
         this.advertisementsService.createAdvertisement(adToPush);
+        this.router.navigate(['/ad/', adToPush.id]);
     }
 
     onPopulateForm() {
@@ -69,7 +71,7 @@ export class AdvertisementNewComponent implements OnInit {
 
     onFakeSubmit() {
         var adToPush: Advertisement = new Advertisement(
-            5,
+            this.advertisementsService.getNextId(),
             'Test title',
             99999,
             'Ad description',
