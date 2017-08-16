@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
             <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <button class="btn btn-info btn-lg btn-block" type="button" (click)="onPopulateForm()">Populate with sample data</button>                    
                 <div class="row">
                     <div class="col-md-6">
                         <div 
@@ -65,7 +66,6 @@
                     <button class="btn btn-success btn-lg btn-block" type="submit">Submit</button>
                 </div>
             </form>
-            <button class="btn btn-success btn-lg btn-block" type="button" (click)="onFakeSubmit()">Fake Submit</button>
         </div>
     </div>
 </div>

@@ -52,7 +52,19 @@ export class AdvertisementNewComponent implements OnInit {
     }
 
     onPopulateForm() {
-        
+        this.newAdForm.setValue({
+            adInfo: {
+                title: 'Lotus Elan Sprint (1972)',
+                price: 35000,
+                description: 'Lotus Elan Sprint FHC. This Elan is a genuine two owner vehicle and has been subject of a substantial rebuild onto a Tony Thompson 26R spec chassis. The engine was rebuilt and has Tony Thompson Racing driveshaft, rear adjustable suspension, new wiring loom, and dashboard, stainless steel exhaust and much more. It has done only a very small mileage since completion.',
+                imagePath: 'https://farm1.static.flickr.com/296/31891746881_ab711a3a59.jpg'
+            },
+            contactInfo: {
+                name: 'Mick McCarthy',
+                phone: '02890******',
+                email: 'mick@********.com'
+            }
+        });
     }
 
     onFakeSubmit() {
