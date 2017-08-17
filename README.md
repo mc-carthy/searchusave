@@ -1,4 +1,4 @@
-# Search-U-Save
+# Search-U-Save
 
 ## Development server instructions
 
